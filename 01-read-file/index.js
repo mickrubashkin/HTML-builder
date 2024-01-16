@@ -1,10 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const pathToFile = path.format({
-  dir: '01-read-file',
-  base: 'text.txt',
-});
+const pathToFile = path.join(__dirname, './text.txt');
 
 const readerStream = fs.createReadStream(pathToFile);
 readerStream.setEncoding('UTF8');
